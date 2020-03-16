@@ -1,0 +1,9 @@
+<h1>Nos produits</h1>
+
+<ul>
+    <div class="card" *ngFor="let produit of produits">
+        <h1>{{ produit.nom }}</h1>
+        <h2>Catégorie : {{ produit.categorie }}</h2>
+        <p>Quantité : {{ produit.quantite }}</p>
+    </div>
+</ul>
