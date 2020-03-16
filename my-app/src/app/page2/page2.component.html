@@ -1,0 +1,13 @@
+<p>page2 works!</p>
+
+<h1>{{title}}</h1>
+<h2>My favorite hero is: {{myHero}}</h2>
+<p>Héros ({{heroes.length}}) :</p>
+
+<p  *ngIf="!isComplete()"> Il en manque 1</p>
+<p  *ngIf="isComplete()"> L'équipe est au complet !</p>
+<ul>
+  <li *ngFor="let hero of heroes">
+    {{ hero }}
+  </li>
+</ul>

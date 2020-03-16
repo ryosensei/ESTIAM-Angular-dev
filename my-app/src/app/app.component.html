@@ -1,0 +1,20 @@
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/page1" routerLinkActive="active">Page1</a>
+  <a routerLink="/page2" routerLinkActive="active">Page2</a>
+</nav>
+<router-outlet></router-outlet>
+
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
