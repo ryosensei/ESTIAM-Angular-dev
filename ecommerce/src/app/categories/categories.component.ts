@@ -3,6 +3,7 @@ import { CategorieService } from '../categorie.service';
 import { Categorie } from '../Categorie';
 import { ProduitService } from '../produit.service';
 import { Produit } from '../Produit';
+import { element } from 'protractor';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -11,6 +12,7 @@ import { Produit } from '../Produit';
 export class CategoriesComponent implements OnInit {
   categories: Categorie[] = [];
   produits: Produit[] = [];
+  currentCategorie = "";
   produitsToDisplay: Produit[] = [];
   constructor(private categorieService: CategorieService,
     private produitService: ProduitService) { }
@@ -38,11 +40,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   onClick(categorie: string) {
-    var el = document.getElementById("prod");
-    if(el !== null){
-      el.parentNode.removeChild(el);
-    }
-
+    this.currentCategorie = categorie;
     this.produits = []
     this.getProduitsFromCategorie(categorie)
   }

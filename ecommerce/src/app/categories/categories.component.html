@@ -1,13 +1,15 @@
 <h1>Nos catégories</h1>
 
-<div class="card" *ngFor="let categorie of categories">
-    <h1 (click)="onClick(categorie.nom)">{{ categorie.nom }}</h1>
-</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+    <div class="card" *ngFor="let categorie of categories">
+        <h1 (click)="onClick(categorie.nom)">{{ categorie.nom }}</h1>
+    </div>
 
-<div>
-    <div class="card" *ngFor="let produit of produits" id="prod">
-        <h1>{{ produit.nom }}</h1>
-        <h2>Catégorie : {{ produit.categorie }}</h2>
-        <p>Quantité : {{ produit.quantite }}</p>
+    <div class="card" *ngFor="let produit of produits">
+        <div class="prod">
+            <h1>{{ produit.nom }}</h1>
+            <h2>Catégorie : {{ produit.categorie }}</h2>
+            <p>Quantité : {{ produit.quantite }}</p>
+        </div>
     </div>
 </div>
