@@ -9,22 +9,27 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
+import { LoginComponent } from './login/login.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'categories', component: CategoriesComponent },
   { path: 'products', component: ProductsComponent },
-  { path: '**', component: AccueilComponent }
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
