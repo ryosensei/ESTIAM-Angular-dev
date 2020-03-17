@@ -1,0 +1,8 @@
+a
+{
+    cursor: pointer !important;
+}
+.nav-link .active
+{
+    border-bottom: 1px solid #333 !important;
+}

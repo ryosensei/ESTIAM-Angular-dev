@@ -1,0 +1,14 @@
+.card
+{
+    border: 1px solid #aaa;
+    padding: 25px;
+}
+.nav-link .active
+{
+    border-bottom: 1px solid #333 !important;
+}
+
+a
+{
+    cursor: pointer !important;
+}
